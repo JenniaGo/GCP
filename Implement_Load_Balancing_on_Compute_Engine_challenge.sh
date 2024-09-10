@@ -69,7 +69,7 @@ gcloud compute url-maps create web-server-map \
 gcloud compute target-http-proxies create http-lb-proxy \
     --url-map web-server-map
 
-gcloud compute forwarding-rules create $FIREWAL_NAME \
+gcloud compute forwarding-rules create $FIREWALL_NAME \
     --global \
     --target-http-proxy http-lb-proxy \
     --ports 80
