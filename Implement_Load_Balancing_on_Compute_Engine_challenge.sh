@@ -4,7 +4,7 @@
 export INSTANCE_NAME=nucleus-jumphost-839 
 export ZONE=us-west3-b
 export REGION=us-west3
-export FIREWAL_NAME=grant-tcp-rule-902
+export FIREWALL_NAME=grant-tcp-rule-902
 export NETWORK=default
  
 # I used the default network because it is the only one I had created in my project
@@ -42,7 +42,7 @@ gcloud compute instance-groups managed create web-server-group \
     --template web-server-template \
     --region $REGION
 
-gcloud compute firewall-rules create $FIREWAL_NAME \
+gcloud compute firewall-rules create $FIREWALL_NAME \
     --allow tcp:80 \
     --network $NETWORK
 
